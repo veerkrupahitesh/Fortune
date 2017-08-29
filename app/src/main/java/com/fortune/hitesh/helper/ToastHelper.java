@@ -6,8 +6,8 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.veeritsolutions.uhelpme.MyApplication;
-import com.veeritsolutions.uhelpme.R;
+import com.fortune.hitesh.MyApplication;
+import com.fortune.hitesh.R;
 
 
 /**
