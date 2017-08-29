@@ -80,7 +80,7 @@ public class MyApplication extends Application implements Application.ActivityLi
         FONT_WORKSANS_REGULAR = getTypeFace(Constants.FONT_WORKSANS_REGULAR);
         FONT_WORKSANS_LIGHT = getTypeFace(Constants.FONT_WORKSANS_LIGHT);
         registerActivityLifecycleCallbacks(this);
-        Thread.setDefaultUncaughtExceptionHandler(new ExceptionHandler(this));
+       // Thread.setDefaultUncaughtExceptionHandler(new ExceptionHandler(this));
       //  firebaseDatabase = FirebaseDatabase.getInstance(ServerConfig.FCM_APP_URL);
       //  firebaseDatabase.setPersistenceEnabled(true);
     }
