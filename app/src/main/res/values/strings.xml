@@ -3,4 +3,11 @@
     <string name="str_no_internet_connection_available">No internet connection available</string>
     <string name="cancel">Cancel</string>
     <string name="ok">OK</string>
+    <string name="powered_by_adani_wilmar">Powered by : Adani Wilmar</string>
+    <string name="str_username">Username</string>
+    <string name="str_password">Password</string>
+    <string name="str_login">Login</string>
+    <string name="str_forget_pwd">Forgot Password ?</string>
+    <string name="enter_username">Enter username</string>
+    <string name="enter_password">Enter password</string>
 </resources>

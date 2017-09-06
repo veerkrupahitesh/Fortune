@@ -37,7 +37,7 @@ public class ToastHelper {
         mToast.setView(view);
 
         TextView toastMessage = (TextView) view.findViewById(R.id.tv_toast);
-        toastMessage.setTypeface(MyApplication.getInstance().FONT_WORKSANS_REGULAR);
+        toastMessage.setTypeface(MyApplication.getInstance().ARIAL_ROUNDED_MT_BOLD);
         toastMessage.setText(mMessage);
 
         if (showToast)
@@ -54,7 +54,7 @@ public class ToastHelper {
         mToast.setView(view);
 
         TextView toastMessage = (TextView) view.findViewById(R.id.tv_toast);
-        toastMessage.setTypeface(MyApplication.getInstance().FONT_WORKSANS_REGULAR);
+        toastMessage.setTypeface(MyApplication.getInstance().ARIAL_ROUNDED_MT_BOLD);
         toastMessage.setText(mMessage);
 
         if (showToast)

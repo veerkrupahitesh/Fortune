@@ -86,11 +86,11 @@ public class CustomDialog {
         //mDialog.getWindow().setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
 
         TextView mDialogTitle = (TextView) mDialog.findViewById(R.id.tv_alert);
-        mDialogTitle.setTypeface(MyApplication.getInstance().FONT_WORKSANS_REGULAR);
+        mDialogTitle.setTypeface(MyApplication.getInstance().ARIAL_ROUNDED_MT_BOLD);
         mDialogTitle.setText(mTitle);
 
         TextView tvOk = (TextView) mDialog.findViewById(R.id.tv_ok);
-        tvOk.setTypeface(MyApplication.getInstance().FONT_WORKSANS_REGULAR);
+        tvOk.setTypeface(MyApplication.getInstance().ARIAL_ROUNDED_MT_BOLD);
 
         tvOk.setOnClickListener(new View.OnClickListener() {
             @Override

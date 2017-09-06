@@ -7,5 +7,22 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="centerCrop"
-        android:src="@drawable/img_splash"/>
+        android:src="@drawable/img_splash" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:src="@drawable/img_splash_logo" />
+
+    <TextView
+        android:id="@+id/tv_poweredBy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:text="@string/powered_by_adani_wilmar"
+        android:textColor="#413104"
+        android:textSize="15sp" />
 </RelativeLayout>

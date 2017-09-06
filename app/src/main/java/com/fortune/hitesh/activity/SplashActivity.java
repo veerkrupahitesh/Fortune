@@ -5,10 +5,15 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.widget.TextView;
 
+import com.fortune.hitesh.MyApplication;
 import com.fortune.hitesh.R;
 import com.fortune.hitesh.helper.PrefHelper;
 import com.fortune.hitesh.utility.Utils;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
 
 
 /**
@@ -17,6 +22,8 @@ import com.fortune.hitesh.utility.Utils;
 
 public class SplashActivity extends AppCompatActivity {
 
+    @BindView(R.id.tv_poweredBy)
+    TextView tvPoweredBy;
     private Handler handler = new Handler();
 
     @Override
@@ -26,7 +33,9 @@ public class SplashActivity extends AppCompatActivity {
         // getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
+        ButterKnife.bind(this);
 
+        tvPoweredBy.setTypeface(MyApplication.getInstance().ARIAL_ROUNDED_MT_BOLD);
         Runnable runnable = new Runnable() {
 
             @Override

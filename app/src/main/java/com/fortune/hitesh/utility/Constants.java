@@ -39,8 +39,9 @@ public class Constants {
     public static final String REGISTER_BY = "registerBy";
     public static final String IS_FROM_SIGN_UP = "IsFromSignUp";
     public static final String IS_FROM_HOME_ACTIVITY = "homeActivity";
+
     /*Type face constants in whole project */
-    public static final String FONT_WORKSANS_MEDIUM = "fonts/WorkSans-Medium.otf";
+    public static final String FONT_ARIAL_ROUNDED_MT_BOLD = "fonts/arial_rounded.TTF";
     public static final String FONT_WORKSANS_REGULAR = "fonts/WorkSans-Regular.otf";
     public static final String FONT_WORKSANS_LIGHT = "fonts/WorkSans-Light.otf";
     /**

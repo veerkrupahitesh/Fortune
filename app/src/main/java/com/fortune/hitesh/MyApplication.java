@@ -43,7 +43,7 @@ public class MyApplication extends Application implements Application.ActivityLi
     //private final Context mContext;
     private final String LINE_SEPARATOR = "\n";
     public boolean isAppRunnning;
-    public Typeface FONT_WORKSANS_MEDIUM, FONT_WORKSANS_REGULAR, FONT_WORKSANS_LIGHT;
+    public Typeface ARIAL_ROUNDED_MT_BOLD;
     String response;
     private RequestQueue mRequestQueue;
    // private FirebaseDatabase firebaseDatabase;
@@ -76,9 +76,8 @@ public class MyApplication extends Application implements Application.ActivityLi
         mInstance = this;
        // MapsInitializer.initialize(this);
         isAppRunnning = true;
-        FONT_WORKSANS_MEDIUM = getTypeFace(Constants.FONT_WORKSANS_MEDIUM);
-        FONT_WORKSANS_REGULAR = getTypeFace(Constants.FONT_WORKSANS_REGULAR);
-        FONT_WORKSANS_LIGHT = getTypeFace(Constants.FONT_WORKSANS_LIGHT);
+        ARIAL_ROUNDED_MT_BOLD = getTypeFace(Constants.FONT_ARIAL_ROUNDED_MT_BOLD);
+
         registerActivityLifecycleCallbacks(this);
        // Thread.setDefaultUncaughtExceptionHandler(new ExceptionHandler(this));
       //  firebaseDatabase = FirebaseDatabase.getInstance(ServerConfig.FCM_APP_URL);
