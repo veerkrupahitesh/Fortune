@@ -9,6 +9,7 @@ import android.widget.RelativeLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import com.fortune.hitesh.MyApplication;
 import com.fortune.hitesh.R;
 import com.fortune.hitesh.api.DataObserver;
 import com.fortune.hitesh.api.RequestCode;
@@ -41,6 +42,9 @@ public class ActivitySelectOtherTitle extends AppCompatActivity implements DataO
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_select_other_title);
         ButterKnife.bind(this);
+
+        txvDescription.setTypeface(MyApplication.getInstance().ARIAL_ROUNDED_MT_BOLD);
+
     }
 
     @Override

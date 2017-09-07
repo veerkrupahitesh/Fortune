@@ -29,17 +29,19 @@ public class HomeActivity extends AppCompatActivity implements OnBackPressedEven
     TextView tvHeaderTitle;
     @BindView(R.id.reltiveHeader)
     RelativeLayout reltiveHeader;
-    @BindView(R.id.sp_select_photo)
-    Spinner spSelectPhoto;
-    @BindView(R.id.img_f)
-    ImageView imgF;
     @BindView(R.id.sp_select_store)
     Spinner spSelectStore;
+    @BindView(R.id.img_f)
+    ImageView imgF;
 
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
         ButterKnife.bind(this);
+
+
+
+
     }
 
 

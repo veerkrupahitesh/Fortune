@@ -58,30 +58,41 @@
         android:layout_below="@+id/appbarLayout">
 
         <RelativeLayout
+
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <ImageView
-                android:id="@+id/img_take_photo"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                android:layout_margin="20dp"
-                android:src="@drawable/pro_14626" />
+            <LinearLayout
+                android:id="@+id/linUlodedImage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <ImageView
+                    android:id="@+id/img_take_photo"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/pro_14626" />
 
 
-            <ImageView
-                android:id="@+id/img_take_photo1"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                android:layout_marginTop="20dp"
-                android:layout_toRightOf="@+id/img_take_photo"
-                android:src="@drawable/pro_14626" />
+                <ImageView
+                    android:id="@+id/img_take_photo1"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/img_take_photo"
+                    android:layout_weight="1"
+                    android:src="@drawable/pro_14626" />
+            </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/lin_main_image"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/img_take_photo1"
+                android:layout_below="@+id/linUlodedImage"
                 android:layout_centerHorizontal="true"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
@@ -144,7 +155,7 @@
                         android:orientation="vertical">
 
                         <TextView
-                            android:id="@+id/txv_Photo"
+                            android:id="@+id/txv_Photo_name"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Store Photo 01"
@@ -197,7 +208,7 @@
                         android:orientation="vertical">
 
                         <TextView
-                            android:id="@+id/txv_photo1"
+                            android:id="@+id/txv_photo_name1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Ahemdabad Photo"

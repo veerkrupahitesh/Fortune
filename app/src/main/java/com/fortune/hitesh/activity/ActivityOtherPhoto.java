@@ -11,6 +11,7 @@ import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.fortune.hitesh.MyApplication;
 import com.fortune.hitesh.R;
 import com.fortune.hitesh.api.DataObserver;
 import com.fortune.hitesh.api.RequestCode;
@@ -37,14 +38,16 @@ public class ActivityOtherPhoto extends AppCompatActivity implements DataObserve
     ImageView imgTakePhoto;
     @BindView(R.id.img_take_photo1)
     ImageView imgTakePhoto1;
+    @BindView(R.id.linUlodedImage)
+    LinearLayout linUlodedImage;
     @BindView(R.id.txv_main_image)
     TextView txvMainImage;
     @BindView(R.id.btn_take_photo)
     Button btnTakePhoto;
     @BindView(R.id.circular_ProgressBar)
     ProgressBar circularProgressBar;
-    @BindView(R.id.txv_Photo)
-    TextView txvPhoto;
+    @BindView(R.id.txv_Photo_name)
+    TextView txvPhotoName;
     @BindView(R.id.txv_photo_size)
     TextView txvPhotoSize;
     @BindView(R.id.img_true)
@@ -53,8 +56,8 @@ public class ActivityOtherPhoto extends AppCompatActivity implements DataObserve
     LinearLayout linProgress;
     @BindView(R.id.circular_ProgressBar1)
     ProgressBar circularProgressBar1;
-    @BindView(R.id.txv_photo1)
-    TextView txvPhoto1;
+    @BindView(R.id.txv_photo_name1)
+    TextView txvPhotoName1;
     @BindView(R.id.txv_hoto_size1)
     TextView txvHotoSize1;
     @BindView(R.id.img_true1)
@@ -71,7 +74,12 @@ public class ActivityOtherPhoto extends AppCompatActivity implements DataObserve
         setContentView(R.layout.activity_other_photo);
         ButterKnife.bind(this);
 
-
+        txvMainImage.setTypeface(MyApplication.getInstance().ARIAL_ROUNDED_MT_BOLD);
+        btnTakePhoto.setTypeface(MyApplication.getInstance().ARIAL_ROUNDED_MT_BOLD);
+        txvPhotoName.setTypeface(MyApplication.getInstance().ARIAL_ROUNDED_MT_BOLD);
+        txvPhotoSize.setTypeface(MyApplication.getInstance().ARIAL_ROUNDED_MT_BOLD);
+        txvPhotoName1.setTypeface(MyApplication.getInstance().ARIAL_ROUNDED_MT_BOLD);
+        txvHotoSize1.setTypeface(MyApplication.getInstance().ARIAL_ROUNDED_MT_BOLD);
     }
 
     @Override

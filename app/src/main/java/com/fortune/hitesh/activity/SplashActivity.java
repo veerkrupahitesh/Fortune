@@ -53,7 +53,7 @@ public class SplashActivity extends AppCompatActivity {
                 PrefHelper.getInstance().setLong(PrefHelper.IMAGE_CACHE_FLAG, System.currentTimeMillis());
 
                 if (PrefHelper.getInstance().getBoolean(PrefHelper.IS_LOGIN, false)) {
-                    Intent intent = new Intent(SplashActivity.this, ActivityUploadPhoto.class);
+                    Intent intent = new Intent(SplashActivity.this, HomeActivity.class);
                     //intent.putExtra(Constants.IS_FROM_SIGN_UP, false);
                     startActivity(intent);
                     overridePendingTransition(R.anim.fade_in, R.anim.fade_out);

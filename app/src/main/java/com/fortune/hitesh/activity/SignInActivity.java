@@ -119,7 +119,7 @@ public class SignInActivity extends AppCompatActivity implements DataObserver {
         switch (mRequestCode) {
             case Login:
                 PrefHelper.getInstance().setBoolean(PrefHelper.IS_LOGIN, true);
-                Intent intent = new Intent(SignInActivity.this, ActivityUploadPhoto.class);
+                Intent intent = new Intent(SignInActivity.this, HomeActivity.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK); // Clear the stack of activities
                 startActivity(intent);
                 overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
