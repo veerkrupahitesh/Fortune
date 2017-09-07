@@ -96,13 +96,13 @@ public class ExceptionHandler implements Thread.UncaughtExceptionHandler {
 
         try {
 
-            Debug.trace("URL:" + ServerConfig.SERVER_LIVE_URL + ApiList.SEND_EMAIL);
+           // Debug.trace("URL:" + ServerConfig.SERVER_LIVE_URL + ApiList.SEND_EMAIL);
             JSONObject objParam = new JSONObject();
             objParam.put("op", "SendEmail");
             objParam.put("AuthKey", "2r0XiUb+GJPhA3OCvs+NOA==");
             objParam.put("sMailMessage", errorReport.toString());
             Debug.trace("errorText:" + objParam.toString());
-            String crashReportUrl = ServerConfig.SERVER_LIVE_URL + ApiList.SEND_EMAIL;
+            String crashReportUrl = ServerConfig.SERVER_LIVE_URL /*+ ApiList.SEND_EMAIL*/;
 
             /*RestClient.getInstance().post(mContext, Request.Method.POST,ApiList.APIs.addCrashApi.getUrl(),objParam,null, RequestCode.crashReport,
                     false);*/

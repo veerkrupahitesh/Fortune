@@ -4,24 +4,23 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
-import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.fortune.hitesh.R;
 import com.fortune.hitesh.api.DataObserver;
 import com.fortune.hitesh.api.RequestCode;
-import com.fortune.hitesh.listener.OnBackPressedEvent;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
 /**
- * Created by hitesh on 29-08-2017.
+ * Created by ABC on 9/6/2017.
  */
 
-public class HomeActivity extends AppCompatActivity implements OnBackPressedEvent, DataObserver {
-
+public class ActivityUploadPhoto extends AppCompatActivity implements DataObserver {
 
     @BindView(R.id.img_menu)
     ImageView imgMenu;
@@ -29,15 +28,21 @@ public class HomeActivity extends AppCompatActivity implements OnBackPressedEven
     TextView tvHeaderTitle;
     @BindView(R.id.reltiveHeader)
     RelativeLayout reltiveHeader;
-    @BindView(R.id.sp_select_photo)
-    Spinner spSelectPhoto;
+    @BindView(R.id.lin_main_image)
+    LinearLayout linMainImage;
+//    @BindView(R.id.circularProgressBar)
+//    ProgressBar circularProgressBar;
+//    @BindView(R.id.textView)
+    TextView textView;
     @BindView(R.id.img_f)
     ImageView imgF;
 
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home);
+        setContentView(R.layout.activity_upload_photo);
         ButterKnife.bind(this);
+
+
     }
 
 

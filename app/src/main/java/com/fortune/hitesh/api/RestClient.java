@@ -27,6 +27,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.UnsupportedEncodingException;
+import java.util.HashMap;
 import java.util.Map;
 
 /**
@@ -68,18 +69,6 @@ public class RestClient {
 
                 Debug.trace("postUrl", postUrl);
 
-                JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(mRequestMethod, postUrl, mPostParams, new Response.Listener<JSONObject>() {
-                    @Override
-                    public void onResponse(JSONObject response) {
-
-                    }
-                }, new Response.ErrorListener() {
-                    @Override
-                    public void onErrorResponse(VolleyError error) {
-
-                    }
-                });
-
 
                 JsonRequest mPostRequest = new JsonRequest(mRequestMethod, postUrl, mPostParams.toString(),
                         new Response.Listener<JSONObject>() {
@@ -88,7 +77,7 @@ public class RestClient {
 
                                 CustomDialog.getInstance().dismiss();
 
-                                verifyResponse(response, mRequestCode, dataObserver);
+                                verifyResponse(response.toString(), mRequestCode, dataObserver);
                                 //checkResponse(response, dataObserver, mRequestCode);
                                 //  Object object = ResponseManager.parseResponse(response.toString(), mRequestCode, getGsonInstance());
                                 //  dataObserver.onSuccess(mRequestCode, object);
@@ -146,48 +135,20 @@ public class RestClient {
 
     }
 
-    private void verifyResponse(JSONObject response, RequestCode mRequestCode, DataObserver dataObserver) {
+    private void verifyResponse(String response, RequestCode mRequestCode, DataObserver dataObserver) {
 
-        ResponseStatus responseStatus = getGsonInstance().fromJson(response.toString(), ResponseStatus.class);
+        String formatedResponse = response.substring(3);
+        ResponseStatus responseStatus = getGsonInstance().fromJson(formatedResponse, ResponseStatus.class);
 
         if (responseStatus.isIsError()) {
             dataObserver.onFailure(mRequestCode, responseStatus.getError());
         } else {
-            Object object = ResponseManager.parseResponse(response.toString(), mRequestCode, getGsonInstance());
+            Object object = ResponseManager.parseResponse(formatedResponse, mRequestCode, getGsonInstance());
             dataObserver.onSuccess(mRequestCode, object);
         }
     }
 
-    private void checkResponse(JSONArray response, DataObserver dataObserver, RequestCode mRequestCode) {
-        Object object;
-        /*try {
-            if (response != null && response.length() != 0) {
 
-                JSONObject jsonObject = response.getJSONObject(0);
-                if (jsonObject.has("DataId")) {
-                    if (jsonObject.getInt("DataId") == 0) {
-                        object = getGsonInstance().fromJson(response.getJSONObject(0).toString(), ErrorModel.class);
-                        ErrorModel errorModel = (ErrorModel) object;
-
-                        if (errorModel.getErrorNumber() == Constants.NO_DATA_FOUND) {
-                            dataObserver.onSuccess(mRequestCode, object);
-                        } else {
-                            dataObserver.onFailure(mRequestCode, ((ErrorModel) object).getError());
-                        }
-
-                    } else {
-                        object = ResponseManager.parseResponse(response.toString(), mRequestCode, getGsonInstance());
-                        dataObserver.onSuccess(mRequestCode, object);
-                    }
-                } else {
-                    object = ResponseManager.parseResponse(response.toString(), mRequestCode, getGsonInstance());
-                    dataObserver.onSuccess(mRequestCode, object);
-                }
-            }
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }*/
-    }
 
     public void post(Context mContext, int mRequestMethod, final Map<String, String> mapParams, /*JSONObject mPostParams,*/ String url, boolean isDialogRequired, final RequestCode mRequestCode, final DataObserver dataObserver) {
 
@@ -209,8 +170,8 @@ public class RestClient {
                         CustomDialog.getInstance().dismiss();
 
                         try {
-                            verifyResponse(new JSONObject(response), mRequestCode, dataObserver);
-                        } catch (JSONException e) {
+                            verifyResponse(response, mRequestCode, dataObserver);
+                        } catch (Exception e) {
                             e.printStackTrace();
                         }
                         //Object object = ResponseManager.parseResponse(response, mRequestCode, getGsonInstance());
@@ -239,11 +200,18 @@ public class RestClient {
                 }) {
                     @Override
                     protected Map<String, String> getParams() throws AuthFailureError {
-
+                        mapParams.put("Content-Type", "application/x-www-form-urlencoded");
                         return mapParams;
                     }
+                   /* @Override
+                    public Map<String, String> getHeaders() throws AuthFailureError {
 
+                        Map<String, String> headers = new HashMap<>();
+                        headers.put("Content-Type", "application/x-www-form-urlencoded");
 
+                        return headers;
+                    }
+*/
                 };
 
                 MyApplication.getInstance().addToRequestQueue(mPostRequest, mContext.getClass().getSimpleName());

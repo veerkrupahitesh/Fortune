@@ -12,27 +12,16 @@ import java.io.Serializable;
 public class ResponseStatus implements Serializable
 {
 
-    @SerializedName("DataId")
-    @Expose
-    private int dataId;
-    @SerializedName("IsError")
+    @SerializedName("is_error")
     @Expose
     private boolean isError;
-    @SerializedName("ErrorNumber")
+    @SerializedName("error_code")
     @Expose
     private int errorNumber;
-    @SerializedName("Error")
+    @SerializedName("error")
     @Expose
     private String error;
 
-
-    public int getDataId() {
-        return dataId;
-    }
-
-    public void setDataId(int dataId) {
-        this.dataId = dataId;
-    }
 
     public boolean isIsError() {
         return isError;

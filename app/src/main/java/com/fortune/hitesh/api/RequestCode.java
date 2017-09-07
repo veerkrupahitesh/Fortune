@@ -12,12 +12,9 @@ import com.fortune.hitesh.models.StateModel;
 
 public enum RequestCode {
 
-    clientInsert(LoginUserModel.class),
-    GetUser(LoginUserModel.class),
-    ClientUpdate(LoginUserModel.class),
-    GetCountry(CountryModel[].class),
-    GetState(StateModel[].class),
-    GetCity(CityModel[].class),
+
+    Login(LoginUserModel.class),
+
     ForgotPassword(LoginUserModel.class);
 
 
