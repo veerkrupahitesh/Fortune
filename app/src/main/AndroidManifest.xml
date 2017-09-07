@@ -38,9 +38,7 @@
         <activity
             android:name=".activity.ActivitySelectOtherTitle"
             android:screenOrientation="portrait" />
-        <activity
-            android:name=".activity.ACtivitySelectTitle"
-            android:screenOrientation="portrait" />
+
 
     </application>
 

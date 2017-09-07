@@ -6,4 +6,5 @@
     <color name="colorListviewDivider">#77000000</color>
     <color name="colorPoweredBy">#413104</color>
     <color name="colorBack">#FAEFC1</color>
+    <color name="colourListBack">#FAEFC1</color>
 </resources>

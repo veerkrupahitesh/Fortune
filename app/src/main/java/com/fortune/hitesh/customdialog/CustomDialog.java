@@ -6,9 +6,14 @@ import android.app.TimePickerDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.graphics.drawable.ColorDrawable;
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.DatePicker;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.TimePicker;
 
@@ -72,6 +77,55 @@ public class CustomDialog {
             e.printStackTrace();
         }
     }
+
+    /*public void showAddBreed(Context mContext, boolean mIsCancelable) {
+
+        mDialog = new Dialog(mContext, R.style.dialogStyle);
+        //@SuppressLint("InflateParams")
+        View view = LayoutInflater.from(mContext).inflate(R.layout.custom_dialog_select_store, null, false);
+        mDialog.setContentView(view);
+        Utils.setupOutSideTouchHideKeyboard(view);
+         *//* Set Dialog width match parent *//*
+        mDialog.getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+
+        // mDialog.getWindow().setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
+        mDialog.setCancelable(mIsCancelable);
+
+        final Button submit = (Button) mDialog.findViewById(R.id.btn_submit_addBreed);
+        submit.setTypeface(MyApplication.getInstance().ARIAL_ROUNDED_MT_BOLD);
+
+        final EditText edtOtherReason = (EditText) mDialog.findViewById(R.id.edt_addPetBreed);
+        edtOtherReason.setTypeface(MyApplication.getInstance().ARIAL_ROUNDED_MT_BOLD);
+        edtOtherReason.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                String msg = edtOtherReason.getText().toString().trim();
+                if (msg.isEmpty()) {
+                    submit.setTag(null);
+                } else {
+                    submit.setTag(msg);
+                }
+                submit.setTag(edtOtherReason.getText().toString().trim());
+            }
+        });
+        //appointmentRejectModel.setRejectionRemarks(edtOtherReason.getText().toString().trim());
+        //submit.setTag(appointmentRejectModel);
+        if (mDialog != null) {
+            if (!isDialogShowing()) {
+                mDialog.show();
+            }
+        }
+    }*/
 
     public void showAlert(Context mContext, String mTitle, boolean mIsCancelable) {
 

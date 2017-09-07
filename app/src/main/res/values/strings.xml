@@ -16,6 +16,8 @@
     <string name="str_take_image">Take Photo</string>
     <string name="str_upload_photo">Upload Photo</string>
     <string name="str_description">Description</string>
+    <string name="str_submit">Submit</string>
+    <string name="str_select_store">Select Store</string>
 
 
     <string-array name="SelectStore">

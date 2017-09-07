@@ -23,7 +23,7 @@
             android:background="@color/colorBack">
 
             <ImageView
-                android:id="@+id/img_menu"
+                android:id="@+id/img_back"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
@@ -52,34 +52,39 @@
 
     </android.support.design.widget.AppBarLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_vertical"
-        android:orientation="horizontal"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:padding="10dp"
-        android:background="@drawable/drw_rounded_corner"
-        android:layout_centerInParent="true">
 
-        <Spinner
-            android:id="@+id/sp_select_store"
-            android:layout_width="0dp"
-            android:layout_height="20dp"
-            android:layout_weight="1"
-            android:entries="@array/SelectStore"
-            android:background="@android:color/transparent"
-            android:spinnerMode="dialog" />
-
-        <ImageView
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:id="@+id/lin_select_store"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:src="@drawable/img_dropdown"
-            android:layout_marginRight="15dp"
-            android:layout_marginEnd="15dp"/>
-    </LinearLayout>
+            android:clickable="true"
+            android:background="@drawable/drw_rounded_corner"
+            android:onClick="onClick"
+            android:orientation="horizontal"
+            android:layout_centerInParent="true"
+            android:layout_margin="20dp">
 
+            <TextView
+                android:id="@+id/tv_select_store"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:padding="10dp"
+                android:gravity="center|left"
+                android:text="Select Store"
+                android:textColor="@android:color/black"
+                android:textSize="15sp"/>
+
+            <ImageView
+                android:id="@+id/img_down"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="10dp"
+                android:src="@drawable/img_dropdown"/>
+
+        </LinearLayout>
 <ImageView
     android:id="@+id/img_f"
     android:visibility="gone"
