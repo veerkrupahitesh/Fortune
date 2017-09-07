@@ -42,7 +42,7 @@
                 android:ellipsize="end"
                 android:gravity="center"
                 android:maxLines="1"
-                android:text="@string/str_submit_photo"
+                android:text="@string/str_upload_photo"
                 android:textColor="@android:color/black"
                 android:textSize="20sp"
                 android:textStyle="bold"
@@ -90,6 +90,7 @@
                     android:padding="20dp">
 
                     <TextView
+                        android:id="@+id/txv_main_image"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/str_main_image"
@@ -98,6 +99,7 @@
                         android:textStyle="bold" />
 
                     <Button
+                        android:id="@+id/btn_take_photo"
                         android:layout_width="wrap_content"
                         android:layout_height="35dp"
                         android:layout_marginTop="10dp"
@@ -118,7 +120,7 @@
                 android:orientation="horizontal">
 
                 <ProgressBar
-                    android:id="@+id/circularProgressBar"
+                    android:id="@+id/circular_ProgressBar"
                     style="?android:attr/progressBarStyleHorizontal"
                     android:layout_width="70dp"
                     android:layout_height="70dp"
@@ -138,7 +140,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/textView"
+                        android:id="@+id/txv_photo"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Ahemdabad Photo"
@@ -146,20 +148,21 @@
                         android:textSize="15sp" />
 
                     <TextView
+                        android:id="@+id/txv_photo_size"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="27.13 KB"
                         android:textColor="#D4C07A" />
                 </LinearLayout>
 
-                <!--<ImageView
+                <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginLeft="20dp"
                     android:layout_marginStart="20dp"
                     android:gravity="center"
-                    android:src="@drawable/img_false" />-->
+                    android:src="@drawable/img_true" />
             </LinearLayout>
 
             <ImageView

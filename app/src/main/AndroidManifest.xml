@@ -32,6 +32,16 @@
         <activity
             android:name=".activity.ActivityUploadPhoto"
             android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ActivityOtherPhoto"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ActivitySelectOtherTitle"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ACtivitySelectTitle"
+            android:screenOrientation="portrait" />
+
     </application>
 
 </manifest>

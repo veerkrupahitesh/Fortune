@@ -3,11 +3,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-<ImageView
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:src="@drawable/img_store_bg"
-    android:scaleType="centerCrop"/>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/img_store_bg"
+        android:scaleType="centerCrop"/>
 
     <android.support.design.widget.AppBarLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
@@ -35,18 +35,18 @@
                 android:padding="10dp"/>
 
 
-             <TextView
-                 android:id="@+id/tv_headerTitle"
-                 android:layout_width="match_parent"
-                 android:layout_height="match_parent"
-                 android:ellipsize="end"
-                 android:gravity="center"
-                 android:maxLines="1"
-                 android:textStyle="bold"
-                 android:text="@string/app_name"
-                 android:textColor="@android:color/black"
-                 android:textSize="20sp"
-                 tools:ignore="RtlHardcoded" />
+            <TextView
+                android:id="@+id/tv_headerTitle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="1"
+                android:textStyle="bold"
+                android:text="@string/app_name"
+                android:textColor="@android:color/black"
+                android:textSize="20sp"
+                tools:ignore="RtlHardcoded" />
 
         </RelativeLayout>
 
@@ -64,11 +64,11 @@
         android:layout_centerInParent="true">
 
         <Spinner
-            android:id="@+id/sp_select_store"
+            android:id="@+id/sp_select_title"
             android:layout_width="0dp"
             android:layout_height="20dp"
             android:layout_weight="1"
-            android:entries="@array/SelectStore"
+            android:entries="@array/Selecttitle"
             android:background="@android:color/transparent"
             android:spinnerMode="dialog" />
 
@@ -80,13 +80,12 @@
             android:layout_marginEnd="15dp"/>
     </LinearLayout>
 
-<ImageView
-    android:id="@+id/img_f"
-    android:visibility="gone"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:src="@drawable/img_f"
-    android:layout_alignParentBottom="true"
-    android:layout_centerHorizontal="true"/>
+    <ImageView
+        android:id="@+id/img_f"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/img_f"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"/>
 
 </RelativeLayout>

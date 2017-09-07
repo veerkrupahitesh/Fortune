@@ -11,17 +11,15 @@ import android.widget.TextView;
 import com.fortune.hitesh.R;
 import com.fortune.hitesh.api.DataObserver;
 import com.fortune.hitesh.api.RequestCode;
-import com.fortune.hitesh.listener.OnBackPressedEvent;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
 /**
- * Created by hitesh on 29-08-2017.
+ * Created by ABC on 9/7/2017.
  */
 
-public class HomeActivity extends AppCompatActivity implements OnBackPressedEvent, DataObserver {
-
+public class ACtivitySelectTitle extends AppCompatActivity implements DataObserver {
 
     @BindView(R.id.img_menu)
     ImageView imgMenu;
@@ -29,19 +27,16 @@ public class HomeActivity extends AppCompatActivity implements OnBackPressedEven
     TextView tvHeaderTitle;
     @BindView(R.id.reltiveHeader)
     RelativeLayout reltiveHeader;
-    @BindView(R.id.sp_select_photo)
-    Spinner spSelectPhoto;
+    @BindView(R.id.sp_select_title)
+    Spinner spSelectTitle;
     @BindView(R.id.img_f)
     ImageView imgF;
-    @BindView(R.id.sp_select_store)
-    Spinner spSelectStore;
 
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home);
+        setContentView(R.layout.activity_select_title);
         ButterKnife.bind(this);
     }
-
 
     @Override
     public void onSuccess(RequestCode mRequestCode, Object mObject) {
